@@ -5,6 +5,7 @@ const auth = {
 };
 
 export default function authReducer(state = auth, action) {
+
     return {
         username: action.username,
         dateOfBirth: action.dateOfBirth,

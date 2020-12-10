@@ -3,8 +3,6 @@ import { useSelector } from "react-redux";
 function UserData() {
     const userFromRedux = useSelector(state => state.auth);
 
-    console.log(userFromRedux.dateOfBirth);
-
     return (
     <div>
         <h1>Your data are:</h1>

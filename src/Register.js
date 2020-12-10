@@ -36,6 +36,7 @@ function Register() {
                     <label>
                         Date of birth:
                         <DatePicker
+                            dateFormat="yyyy/MM/dd"
                             selected={dateOfBirth}
                             onChange={date =>
                                 setDateOfBirth(date)}/>
