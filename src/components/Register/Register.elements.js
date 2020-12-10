@@ -25,3 +25,7 @@ export const Input = styled.input.attrs({
 	margin-bottom: 0.5em;
 `;
 
+export const Paragraph = styled.p`
+	padding-bottom: 20px;
+`;
+

@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {Redirect} from "react-router-dom";
 import {Button, Container, Title} from "../../GlobalStyle";
-import {FormGroup, Input, Label, Label2} from "./Register.elements";
+import {FormGroup, Input, Label, Paragraph} from "./Register.elements";
 
 function Register() {
     const [
@@ -55,7 +55,7 @@ function Register() {
                             }}
                         />
                     </Label>
-                    {error ? <p className="error-message">{error}</p> : null}
+                    {error ? <Paragraph className="error-message">{error}</Paragraph> : null}
                     <Button type="submit">Sign up</Button>
                 </FormGroup>
             </Container>
