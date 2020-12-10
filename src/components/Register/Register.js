@@ -44,7 +44,7 @@ function Register() {
                             onChange={date =>
                                 setDateOfBirth(date)}/>
                     </Label>
-                    <Label2 className="akarmi" htmlFor="label">
+                    <Label htmlFor="label">
                         Email:
                         <Input
                             id="label"
@@ -54,7 +54,7 @@ function Register() {
                                 setEmail(event.target.value);
                             }}
                         />
-                    </Label2>
+                    </Label>
                     {error ? <p className="error-message">{error}</p> : null}
                     <Button type="submit">Sign up</Button>
                 </FormGroup>

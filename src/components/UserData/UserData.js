@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import {Button, Container, Title} from "../../GlobalStyle";
 import {List, ListItem} from "./UserData.elements";
 import {FormGroup} from "../Register/Register.elements";
+import React from "react";
 
 function UserData() {
     const userFromRedux = useSelector(state => state.auth);
@@ -15,7 +16,7 @@ function UserData() {
             <ListItem>Email: {userFromRedux.email}</ListItem>
         </List>
         <FormGroup action="/">
-            <Button type="submit" value="Back" />
+            <Button type="submit">Back</Button>
         </FormGroup>
     </Container>
     )

@@ -9,29 +9,15 @@ export const FormGroup = styled.form`
 
 export const Label = styled.label`
 	margin-bottom: 0.5em;
-	color: palevioletred;
+	color: #1DAB66;
     display: block;
 `;
-
-export const Label2 = styled.div.attrs({
-    className: 'akarmi'
-})`
-    margin-bottom: 0.5em;
-	color: palevioletred;
-    display: block;
-`;
-
-// export const Label2 = styled.label`
-// 	margin-bottom: 0.5em;
-// 	color: palevioletred;
-//     display: block;
-// `;
 
 export const Input = styled.input.attrs({
     type: 'text'
 })`
 	padding: 0.5em;
-	color: palevioletred;
+	color: #1DAB66;
 	background: papayawhip;
 	border: none;
 	border-radius: 3px;
