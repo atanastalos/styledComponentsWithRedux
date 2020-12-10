@@ -1,8 +1,10 @@
 import React from "react";
-import useRegister from "./hooks/useRegister";
+import useRegister from "../../hooks/useRegister";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {Redirect} from "react-router-dom";
+import {Button, Container, Title} from "../../GlobalStyle";
+import {FormGroup, Input, Label, Label2} from "./Register.elements";
 
 function Register() {
     const [
@@ -18,43 +20,45 @@ function Register() {
     return (
         <>
             {redirect ? <Redirect to="/userdata" /> : null}
-            <div>
-                <h1>Sign up!</h1>
-                <form
+            <Container>
+                <Title>Sign up!</Title>
+                <FormGroup
                     method="post"
                     onSubmit={event => submitRegister(event)}>
-                    <label>
+                    <Label htmlFor="label">
                         Name:
-                        <input
+                        <Input
+                            id="label"
                             type="text"
                             name="name"
                             onChange={event => {
                                 setUsername(event.target.value);
                             }}
                         />
-                    </label>
-                    <label>
+                    </Label>
+                    <Label htmlFor="label">
                         Date of birth:
                         <DatePicker
                             dateFormat="yyyy/MM/dd"
                             selected={dateOfBirth}
                             onChange={date =>
                                 setDateOfBirth(date)}/>
-                    </label>
-                    <label>
+                    </Label>
+                    <Label2 className="akarmi" htmlFor="label">
                         Email:
-                        <input
+                        <Input
+                            id="label"
                             type="text"
                             name="email"
                             onChange={event => {
                                 setEmail(event.target.value);
                             }}
                         />
-                    </label>
+                    </Label2>
                     {error ? <p className="error-message">{error}</p> : null}
-                    <button type="submit">Sign up</button>
-                </form>
-            </div>
+                    <Button type="submit">Sign up</Button>
+                </FormGroup>
+            </Container>
         </>
     );
 }
