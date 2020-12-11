@@ -2,10 +2,8 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
     list-style: none;
-    margin-top: 20px;
+    margin: 20px auto 40px auto;
     width: 250px;
-    margin-left: auto;
-    margin-right: auto;
 `;
 
 export const ListItem = styled.li`

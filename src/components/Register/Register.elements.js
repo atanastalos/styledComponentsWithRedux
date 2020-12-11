@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FormGroup = styled.form`
     display: block;
 	width: 300px;
-	margin: 50px auto;
+	margin: 25px auto 50px auto;
 `;
 
 export const Label = styled.label`
@@ -22,8 +22,21 @@ export const Input = styled.input`
 	margin-bottom: 0.5em;
 `;
 
+export const StyledDatePicker = styled.div`
+ .react-datepicker-wrapper,
+ .react-datepicker__input-container,
+ .react-datepicker__input-container input {
+   width: 100%;
+   color: #1DAB66;
+   background-color: papayawhip;
+   border: none;
+   border-radius: 3px;
+ }
+`;
+
 export const Paragraph = styled.p`
 	padding-bottom: 20px;
 	color: #FA6C4C;
 `;
+
 

@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {Redirect} from "react-router-dom";
 import {Center, Button, Container, Title} from "../../GlobalStyle";
-import {FormGroup, Input, Label, Paragraph} from "./Register.elements";
+import {FormGroup, Input, Label, Paragraph, StyledDatePicker} from "./Register.elements";
 
 function Register() {
     const [
@@ -38,11 +38,13 @@ function Register() {
                     </Label>
                     <Label htmlFor="label">
                         Date of birth:
-                        <DatePicker
-                            dateFormat="yyyy/MM/dd"
-                            selected={dateOfBirth}
-                            onChange={date =>
-                                setDateOfBirth(date)}/>
+                        <StyledDatePicker>
+                            <DatePicker
+                                dateFormat="yyyy/MM/dd"
+                                selected={dateOfBirth}
+                                onChange={date =>
+                                    setDateOfBirth(date)}/>
+                        </StyledDatePicker>
                     </Label>
                     <Label htmlFor="label">
                         Email:
