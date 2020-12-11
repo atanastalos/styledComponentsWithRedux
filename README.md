@@ -14,7 +14,8 @@
 </p>
 
 <h2>Description</h2>
-<p align="justify">Input form for register without backend. Validator checks whether you fill all required fields or write a valid email. If you add correct data, it redirects to an other page where you can read your summarized data. Data is stored at frontend through Redux.</p>
+<p align="justify">Input form for register without backend. Validator checks whether you fill all required fields or write a valid email. If you add correct data, it redirects to an other page where you can read your summarized data. Data is stored at frontend using Redux.
+App is deployed using AWS Amplify.</p>
 
 <h2>Framework, tools :muscle: :muscle:</h2> 
 <ul>
@@ -22,6 +23,7 @@
   <li><a href="https://reactdatepicker.com/">React Datepicker</a></li>
   <li><a href="https://styled-components.com/">Styled Components</a></li></li>
   <li><a href="https://redux.js.org/">Redux</a></li></li>
+  <li><a href="https://aws.amazon.com/amplify/?nc1=h_ls">AWS Amplify</a></li></li>
 </ul>
 
 <h2>Datepicker</h2>
@@ -84,6 +86,10 @@ function submitRegister(event) {
 <p align="center">
 <img src="https://github.com/atanastalos/styledComponentsWithRedux/blob/main/readme_assets/data.png" alt="data" height="300"/>
 </p>
+
+<h2>AWS Amplify :fire:</h2>
+<p align="justify">GitHub repo is connected to AWS Amplify. You can see my app <a href="https://main.d2xuceryh597ov.amplifyapp.com/">here</a>.</p>
+
 <h2>Project setup</h2>
 
 ```
