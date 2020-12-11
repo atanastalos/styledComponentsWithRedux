@@ -31,6 +31,16 @@ export const StyledDatePicker = styled.div`
    background-color: papayawhip;
    border: none;
    border-radius: 3px;
+   padding: 2px;
+ }
+ 
+ .react-datepicker__day--selected,
+ .react-datepicker__day--keyboard-selected {
+    background-color: #1DAB66;
+ }
+ 
+ .react-datepicker__current-month {
+    color: #1DAB66;
  }
 `;
 
