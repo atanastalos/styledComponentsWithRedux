@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+<h1 align="center">React project with Styled Components and Redux</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
+        <img src="https://img.shields.io/github/languages/code-size/atanastalos/styledComponentsWithRedux" /></a>
+<a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
+        <img src="https://img.shields.io/github/stars/atanastalos/styledComponentsWithRedux?style=social" /></a>
+<a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
+        <img src="https://img.shields.io/github/forks/atanastalos/styledComponentsWithRedux?style=social" /></a>
+  
+<img src="https://github.com/atanastalos/styledComponentsWithRedux/blob/main/readme_assets/preview.png" alt="preview" height="400"/>
+</p>
+<h2>Description</h2>
+<p align="justify">Input form for register without backend. Validator checks whether you fill all required fields or write a valid email. If you add correct data, it redirects to an other page where you can read your summarized data. Data is stored at frontend through Redux.</p>
+<h2>Framework, tools :muscle: :muscle:</h2> 
+<ul>
+  <li><a href="https://reactjs.org/">React</a></li>
+  <li><a href="https://reactdatepicker.com/">React Datepicker</a></li>
+  <li><a href="https://styled-components.com/">Styled Components</a></li></li>
+  <li><a href="https://redux.js.org/">Redux</a></li></li>
+</ul>
+<h2>Datepicker</h2>
+<p align="center">
+<img src="https://github.com/atanastalos/styledComponentsWithRedux/blob/main/readme_assets/datepicker.png" alt="datepicker" height="400"/>
+</p>
+<p align="justify">Datepicker created with React Datepicker, customizing through parameters and Styled Components.</p>
 
-## Available Scripts
+```
+<Label htmlFor="label">
+        Date of birth:
+        <StyledDatePicker>
+          <DatePicker
+              dateFormat="yyyy/MM/dd"
+              selected={dateOfBirth}
+              onChange={date =>
+                  setDateOfBirth(date)}/>
+        </StyledDatePicker>
+</Label>
+```
 
-In the project directory, you can run:
+```
+export const StyledDatePicker = styled.div`
+ .react-datepicker-wrapper,
+ .react-datepicker__input-container,
+ .react-datepicker__input-container input {
+   width: 100%;
+   color: #1DAB66;
+   background-color: papayawhip;
+   border: none;
+   border-radius: 3px;
+   padding: 2px;
+ }
+`;
+```
 
-### `yarn start`
+<h2>Validator</h2>
+<p align="center">
+<img src="https://github.com/atanastalos/styledComponentsWithRedux/blob/main/readme_assets/error1.png" alt="emptyField" height="400"/><img src="https://github.com/atanastalos/styledComponentsWithRedux/blob/main/readme_assets/error2.png" alt="emptyField" height="400"/>
+</p>
+<p align="justify">Validator checks error cases. If everything is okey, you'll be redirected to your summerized data.</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+function submitRegister(event) {
+    event.preventDefault();
+    let error = '';
+    if (username === '' || !dateOfBirth || email === '') {
+        error = 'Every field is required!';
+    } else if (!email.includes('@')) {
+        error = 'Invalid email!';
+    }
+    if (error === '') {
+        setRedirect(true);
+        dispatch(Register(username, dateOfBirth, email));
+    } else {
+        setError(error);
+    }
+}
+```
+<p align="center">
+<img src="https://github.com/atanastalos/styledComponentsWithRedux/blob/main/readme_assets/data.png" alt="data" height="300"/>
+</p>
+<h2>Project setup</h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+npm install
+npm start
+```
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h2 align="center">Thank you for reading! :wave:</h2>
