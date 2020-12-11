@@ -14,7 +14,7 @@
 </p>
 
 <h2>Description</h2>
-<p align="justify">Input form for register without backend. Validator checks whether you fill all required fields or write a valid email. If you add correct data, it redirects to an other page where you can read your summarized data. Data is stored at frontend using Redux.
+<p align="justify">Input form without backend. Validator checks whether you fill all required fields or write a valid email. If you add correct data, it redirects to an other page where you can read your summarized data. Data is stored at frontend using Redux.
 App is deployed using AWS Amplify.</p>
 
 <h2>Framework, tools :muscle: :muscle:</h2> 
