@@ -31,6 +31,13 @@ padding-left: 50px;
 }
 `;
 
+export const Center = styled.div.attrs({
+    className: "center",
+})`
+    margin-top: 20px;
+    text-align: center;
+`;
+
 export const Button = styled.button`
     background-color: #1DAB66;
     border: none;
@@ -43,7 +50,8 @@ export const Button = styled.button`
 `;
 
 export const Title = styled.h1`
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-content: center;

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const FormGroup = styled.form`
-	color: palevioletred;
     display: block;
 	width: 300px;
 	margin: 50px auto;
@@ -13,9 +12,7 @@ export const Label = styled.label`
     display: block;
 `;
 
-export const Input = styled.input.attrs({
-    type: 'text'
-})`
+export const Input = styled.input`
 	padding: 0.5em;
 	color: #1DAB66;
 	background: papayawhip;
@@ -27,5 +24,6 @@ export const Input = styled.input.attrs({
 
 export const Paragraph = styled.p`
 	padding-bottom: 20px;
+	color: #FA6C4C;
 `;
 

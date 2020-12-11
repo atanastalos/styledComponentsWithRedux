@@ -3,7 +3,7 @@ import useRegister from "../../hooks/useRegister";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {Redirect} from "react-router-dom";
-import {Button, Container, Title} from "../../GlobalStyle";
+import {Center, Button, Container, Title} from "../../GlobalStyle";
 import {FormGroup, Input, Label, Paragraph} from "./Register.elements";
 
 function Register() {
@@ -19,7 +19,7 @@ function Register() {
 
     return (
         <>
-            {redirect ? <Redirect to="/userdata" /> : null}
+            {redirect ? <Redirect to="/userdata"/> : null}
             <Container>
                 <Title>Sign up!</Title>
                 <FormGroup
@@ -56,7 +56,9 @@ function Register() {
                         />
                     </Label>
                     {error ? <Paragraph className="error-message">{error}</Paragraph> : null}
-                    <Button type="submit">Sign up</Button>
+                    <Center>
+                        <Button type="submit">Sign up</Button>
+                    </Center>
                 </FormGroup>
             </Container>
         </>

@@ -2,11 +2,18 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
     list-style: none;
-    padding: 0px 20px;
+    margin-top: 20px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
 `;
 
 export const ListItem = styled.li`
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    color: #5B5A5A;
 `;
+
+export const ListItemTitle = styled.span`
+    color: #1DAB66;
+    font-weight: bold;
+    padding-right: 10px;
+`
