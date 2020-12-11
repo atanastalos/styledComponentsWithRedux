@@ -7,11 +7,15 @@
         <img src="https://img.shields.io/github/stars/atanastalos/styledComponentsWithRedux?style=social" /></a>
 <a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/forks/atanastalos/styledComponentsWithRedux?style=social" /></a>
-  
+</p>
+
+<p align="center">
 <img src="https://github.com/atanastalos/styledComponentsWithRedux/blob/main/readme_assets/preview.png" alt="preview" height="400"/>
 </p>
+
 <h2>Description</h2>
 <p align="justify">Input form for register without backend. Validator checks whether you fill all required fields or write a valid email. If you add correct data, it redirects to an other page where you can read your summarized data. Data is stored at frontend through Redux.</p>
+
 <h2>Framework, tools :muscle: :muscle:</h2> 
 <ul>
   <li><a href="https://reactjs.org/">React</a></li>
@@ -19,6 +23,7 @@
   <li><a href="https://styled-components.com/">Styled Components</a></li></li>
   <li><a href="https://redux.js.org/">Redux</a></li></li>
 </ul>
+
 <h2>Datepicker</h2>
 <p align="center">
 <img src="https://github.com/atanastalos/styledComponentsWithRedux/blob/main/readme_assets/datepicker.png" alt="datepicker" height="400"/>
